@@ -950,7 +950,7 @@ body {
 .avatar-ring {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 38px;
   padding: 6px;
   background: linear-gradient(135deg, var(--lavender), var(--pink), var(--mint));
   box-shadow: 0 12px 30px rgba(184, 146, 255, 0.3);
@@ -961,8 +961,8 @@ body {
 }
 
 .avatar-ring:hover {
-  transform: scale(1.03);
-  box-shadow: 0 16px 36px rgba(184, 146, 255, 0.4);
+  transform: scale(1.03) rotate(-1deg);
+  box-shadow: 0 18px 40px rgba(184, 146, 255, 0.45);
 }
 
 .avatar-img {
@@ -970,7 +970,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
-  border-radius: 50%;
+  border-radius: 32px;
   background: var(--white-pure);
   display: block;
 }
@@ -978,7 +978,7 @@ body {
 .avatar-overlay {
   position: absolute;
   inset: 6px;
-  border-radius: 50%;
+  border-radius: 32px;
   background: rgba(42, 35, 61, 0.65);
   backdrop-filter: blur(3px);
   display: flex;
@@ -1004,11 +1004,11 @@ body {
 
 .avatar-edit-badge {
   position: absolute;
-  bottom: 8px;
-  right: 12px;
+  bottom: 4px;
+  right: 4px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 14px;
   background: linear-gradient(135deg, var(--lavender), var(--pink));
   color: var(--white-pure);
   border: 3px solid var(--white-pure);
@@ -2289,6 +2289,20 @@ a.contact-value:hover {
   .avatar-container {
     width: 170px;
     height: 170px;
+  }
+  .avatar-ring {
+    border-radius: 30px;
+  }
+  .avatar-img,
+  .avatar-overlay {
+    border-radius: 25px;
+  }
+  .avatar-edit-badge {
+    bottom: 2px;
+    right: 2px;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
   }
   .hero-name {
     font-size: 1.85rem;
