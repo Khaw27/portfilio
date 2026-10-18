@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miya.Portfolio ✨ | รวงข้าว บุญยเลขา - ICT Portfolio</title>
-  <meta name="description" content="Personal Portfolio เว็บไซต์นำเสนอประวัติและผลงาน นางสาว รวงข้าว บุญยเลขา (มีญ่า) สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT) มหาวิทยาลัยศรีปทุม สไตล์พาสเทลน่ารัก เรียบหรู ทันสมัย">
-  <meta name="keywords" content="Portfolio, Ruangkhaw Boonyalekha, รวงข้าว บุญยเลขา, มีญ่า, ICT, SPU, Sripatum, เทคโนโลยีสารสนเทศและการสื่อสาร, Developer, Web Development">
+  <title>Portfolio ✨ | รวงข้าว บุญยเลขา - ICT Portfolio</title>
+  <meta name="description"
+    content="Personal Portfolio เว็บไซต์นำเสนอประวัติและผลงาน นางสาว รวงข้าว บุญยเลขา (มีญ่า) สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT) มหาวิทยาลัยศรีปทุม สไตล์พาสเทลน่ารัก เรียบหรู ทันสมัย">
+  <meta name="keywords"
+    content="Portfolio, Ruangkhaw Boonyalekha, รวงข้าว บุญยเลขา, มีญ่า, ICT, SPU, Sripatum, เทคโนโลยีสารสนเทศและการสื่อสาร, Developer, Web Development">
   <meta name="author" content="Ruangkhaw Boonyalekha (Miya)">
-  
+
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
-  
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
   <!-- Google Fonts: Prompt & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+    rel="stylesheet">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Ambient Floating Pastel Glow Background -->
   <div class="ambient-background" aria-hidden="true">
@@ -34,7 +41,8 @@
   </div>
 
   <!-- Top Progress Bar -->
-  <div class="slide-progress-bar" id="progressBar" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1"></div>
+  <div class="slide-progress-bar" id="progressBar" role="progressbar" aria-valuemin="1" aria-valuemax="5"
+    aria-valuenow="1"></div>
 
   <!-- Navigation Bar (Glassmorphic Header) -->
   <header class="navbar" id="navbar">
@@ -49,35 +57,70 @@
       <nav class="nav-menu" id="navMenu">
         <a href="#slide-1" class="nav-link active" data-slide="0">
           <span class="nav-num">01</span>
-          <span class="nav-label">หน้าแรก</span>
+          <span class="nav-label" data-i18n="nav.slide1">หน้าแรก</span>
         </a>
         <a href="#slide-2" class="nav-link" data-slide="1">
           <span class="nav-num">02</span>
-          <span class="nav-label">การศึกษา</span>
+          <span class="nav-label" data-i18n="nav.slide2">การศึกษา</span>
         </a>
         <a href="#slide-3" class="nav-link" data-slide="2">
           <span class="nav-num">03</span>
-          <span class="nav-label">ทักษะ & วิชาเรียน</span>
+          <span class="nav-label" data-i18n="nav.slide3">ทักษะ & วิชาเรียน</span>
         </a>
         <a href="#slide-4" class="nav-link" data-slide="3">
           <span class="nav-num">04</span>
-          <span class="nav-label">ประสบการณ์</span>
+          <span class="nav-label" data-i18n="nav.slide4">ประสบการณ์</span>
         </a>
         <a href="#slide-5" class="nav-link" data-slide="4">
           <span class="nav-num">05</span>
-          <span class="nav-label">ติดต่อ</span>
+          <span class="nav-label" data-i18n="nav.slide5">ติดต่อ</span>
         </a>
       </nav>
 
       <!-- Header Action Controls -->
       <div class="nav-actions">
+        <!-- Language Switcher Button (TH / EN) -->
+        <button class="lang-toggle-btn" id="langToggle" aria-label="สลับภาษา / Switch Language"
+          title="สลับภาษา (TH / EN)">
+          <span class="lang-badge lang-th active" id="langBadgeTh">TH</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-badge lang-en" id="langBadgeEn">EN</span>
+          <span class="lang-globe">🌐</span>
+        </button>
+
+        <!-- Dark / Light Theme Mode Toggle -->
+        <button class="icon-btn theme-btn" id="themeToggle" aria-label="สลับโหมดมืด/สว่าง"
+          title="สลับโหมดมืด/สว่าง (Dark / Light Mode)">
+          <!-- Moon Icon (shown in Light Mode) -->
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (shown in Dark Mode) -->
+          <svg class="sun-icon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
         <!-- Sound Effect Toggle -->
-        <button class="icon-btn sound-btn" id="soundToggle" aria-label="เปิด/ปิดเสียงเอฟเฟกต์" title="เสียงเอฟเฟกต์คลิก">
-          <svg class="sound-on-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button class="icon-btn sound-btn" id="soundToggle" aria-label="เปิด/ปิดเสียงเอฟเฟกต์"
+          title="เสียงเอฟเฟกต์คลิก">
+          <svg class="sound-on-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
             <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
           </svg>
-          <svg class="sound-off-icon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="sound-off-icon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
             <line x1="23" y1="9" x2="17" y2="15"></line>
             <line x1="17" y1="9" x2="23" y2="15"></line>
@@ -86,11 +129,15 @@
 
         <!-- Fullscreen Presentation Mode Button -->
         <button class="icon-btn" id="fullscreenToggle" aria-label="โหมดเต็มหน้าจอ" title="โหมดนำเสนอเต็มหน้าจอ">
-          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+          <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+            </path>
           </svg>
-          <svg class="contract-icon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
+          <svg class="contract-icon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3">
+            </path>
           </svg>
         </button>
 
@@ -105,11 +152,16 @@
 
     <!-- Mobile Dropdown Navigation -->
     <div class="mobile-nav" id="mobileNav">
-      <a href="#slide-1" class="mobile-nav-link active" data-slide="0">🌸 01 หน้าแรก & โปรไฟล์</a>
-      <a href="#slide-2" class="mobile-nav-link" data-slide="1">🎓 02 ประวัติการศึกษา</a>
-      <a href="#slide-3" class="mobile-nav-link" data-slide="2">💻 03 ทักษะ & วิชาเรียน</a>
-      <a href="#slide-4" class="mobile-nav-link" data-slide="3">💼 04 ประสบการณ์การทำงาน</a>
-      <a href="#slide-5" class="mobile-nav-link" data-slide="4">💌 05 ช่องทางการติดต่อ</a>
+      <a href="#slide-1" class="mobile-nav-link active" data-slide="0" data-i18n="mobile.slide1">🌸 01 หน้าแรก &
+        โปรไฟล์</a>
+      <a href="#slide-2" class="mobile-nav-link" data-slide="1" data-i18n="mobile.slide2">🎓 02 ประวัติการศึกษา</a>
+      <a href="#slide-3" class="mobile-nav-link" data-slide="2" data-i18n="mobile.slide3">💻 03 ทักษะ & วิชาเรียน</a>
+      <a href="#slide-4" class="mobile-nav-link" data-slide="3" data-i18n="mobile.slide4">💼 04 ประสบการณ์การทำงาน</a>
+      <a href="#slide-5" class="mobile-nav-link" data-slide="4" data-i18n="mobile.slide5">💌 05 ช่องทางการติดต่อ</a>
+      <div class="mobile-extra-actions">
+        <button class="btn btn-secondary mobile-lang-btn" id="mobileLangBtn">🌐 ภาษา: EN / TH</button>
+        <button class="btn btn-secondary mobile-theme-btn" id="mobileThemeBtn">🌙 สลับโหมดมืด</button>
+      </div>
     </div>
   </header>
 
@@ -118,7 +170,7 @@
     <div class="slide-counter" id="slideCounter">
       <span class="current-slide">01</span><span class="counter-sep">/</span><span class="total-slides">05</span>
     </div>
-    
+
     <div class="nav-dots" id="navDots">
       <button class="dot-btn active" data-slide="0" aria-label="สไลด์ 1: หน้าแรก" title="สไลด์ 1: หน้าแรก"></button>
       <button class="dot-btn" data-slide="1" aria-label="สไลด์ 2: ประวัติการศึกษา" title="สไลด์ 2: การศึกษา"></button>
@@ -129,12 +181,14 @@
 
     <div class="slide-arrows">
       <button class="arrow-btn" id="prevSlideBtn" aria-label="สไลด์ก่อนหน้า" title="สไลด์ก่อนหน้า (↑)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
           <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
       </button>
       <button class="arrow-btn" id="nextSlideBtn" aria-label="สไลด์ถัดไป" title="สไลด์ถัดไป (↓)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </button>
@@ -154,33 +208,38 @@
          ============================================================ -->
     <section class="slide-section" id="slide-1" data-slide-index="0">
       <div class="slide-inner hero-layout">
-        
+
         <!-- Left: Editable Profile Card -->
         <div class="profile-card-wrapper">
           <div class="profile-card glass-card">
-            
+
             <!-- Cute Card Top Ribbon & Sparkles -->
             <div class="card-ribbon">
-              <span class="ribbon-tag">✨ SPU ICT Student</span>
-              <span class="status-live"><span class="pulse-dot"></span> Ready to Create</span>
+              <span class="ribbon-tag" data-i18n="hero.badge">✨ SPU ICT Student</span>
+              <span class="status-live"><span class="pulse-dot"></span> <span data-i18n="hero.status">Ready to
+                  Create</span></span>
             </div>
 
             <!-- Avatar Container with Interactive Upload Feature -->
             <div class="avatar-container">
               <div class="avatar-ring">
-                <img id="avatarImage" src="assets/avatar.jpg" alt="รูปโปรไฟล์ มีญ่า รวงข้าว บุญยเลขา" class="avatar-img" />
+                <img id="avatarImage" src="assets/avatar.png" alt="รูปโปรไฟล์ มีญ่า รวงข้าว บุญยเลขา"
+                  class="avatar-img" />
                 <div class="avatar-overlay" id="avatarOverlay" title="คลิกเพื่อเปลี่ยนรูปภาพ">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
                     <circle cx="12" cy="13" r="4"></circle>
                   </svg>
-                  <span>คลิกเปลี่ยนรูปภาพ</span>
+                  <span data-i18n="hero.avatar_overlay">คลิกเปลี่ยนรูปภาพ</span>
                 </div>
               </div>
-              
+
               <!-- Floating Edit Badge -->
-              <button class="avatar-edit-badge" id="avatarUploadBtn" title="อัปโหลดรูปภาพใหม่" aria-label="อัปโหลดรูปภาพใหม่">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <button class="avatar-edit-badge" id="avatarUploadBtn" title="อัปโหลดรูปภาพใหม่"
+                aria-label="อัปโหลดรูปภาพใหม่">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <path d="M12 20h9"></path>
                   <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
                 </svg>
@@ -192,25 +251,26 @@
 
             <!-- Avatar Controls (Customized Notice + Reset) -->
             <div class="avatar-actions-bar" id="avatarActionsBar" style="display: none;">
-              <span class="avatar-custom-label">🌸 ใช้รูปภาพที่คุณอัปโหลด</span>
-              <button class="btn-text-reset" id="resetAvatarBtn">คืนค่ารูปเริ่มต้น</button>
+              <span class="avatar-custom-label" data-i18n="hero.custom_avatar">🌸 ใช้รูปภาพที่คุณอัปโหลด</span>
+              <button class="btn-text-reset" id="resetAvatarBtn"
+                data-i18n="hero.reset_avatar">คืนค่ารูปเริ่มต้น</button>
             </div>
 
             <!-- Mini Quick Info in Profile Card -->
             <div class="profile-card-footer">
               <div class="stat-item">
                 <span class="stat-icon">🎓</span>
-                <span class="stat-text">ป.ตรี ICT</span>
+                <span class="stat-text" data-i18n="hero.stat_edu">ป.ตรี ICT</span>
               </div>
               <div class="stat-divider"></div>
               <div class="stat-item">
                 <span class="stat-icon">💻</span>
-                <span class="stat-text">Dev & Media</span>
+                <span class="stat-text" data-i18n="hero.stat_focus">Dev & Media</span>
               </div>
               <div class="stat-divider"></div>
               <div class="stat-item">
                 <span class="stat-icon">📍</span>
-                <span class="stat-text">SPU Bangkok</span>
+                <span class="stat-text" data-i18n="hero.stat_loc">SPU Bangkok</span>
               </div>
             </div>
 
@@ -220,31 +280,32 @@
         <!-- Right: Hero Information & ICT Statement -->
         <div class="hero-content">
           <div class="hero-greeting-pill">
-            <span class="pill-sparkle">👋 สวัสดีค่ะ! ยินดีต้อนรับสู่</span>
-            <span class="pill-title">Personal Portfolio ✨</span>
+            <span class="pill-title" data-i18n="hero.portfolio_title">Personal Portfolio ✨</span>
           </div>
 
           <h1 class="hero-name">
-            <span class="name-prefix">นางสาว</span> รวงข้าว บุญยเลขา
-            <span class="nickname-badge">(ชื่อเล่น: มีญ่า)</span>
+            <span class="name-prefix" data-i18n="hero.name_prefix">นางสาว</span> <span
+              data-i18n="hero.name_main">รวงข้าว บุญยเลขา</span>
+            <span class="nickname-badge" data-i18n="hero.nickname">(มีญ่า)</span>
           </h1>
 
           <div class="major-badge-wrap">
             <div class="major-badge">
               <span class="major-icon">🌐</span>
-              <span class="major-name">สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT)</span>
+              <span class="major-name" data-i18n="hero.major">สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT)</span>
             </div>
-            <div class="university-pill">มหาวิทยาลัยศรีปทุม (SPU)</div>
+            <div class="university-pill" data-i18n="hero.university">มหาวิทยาลัยศรีปทุม (SPU)</div>
           </div>
 
           <!-- ICT Introduction Quote Box -->
           <div class="ict-quote-card">
             <div class="quote-header">
               <span class="quote-symbol">“</span>
-              <span class="quote-tag">คำนิยาม & ปรัชญาสาขา ICT</span>
+              <span class="quote-tag" data-i18n="hero.quote_tag">คำนิยาม & ปรัชญาสาขา ICT</span>
             </div>
-            <p class="quote-text">
-              มุ่งเน้นการพัฒนาซอฟต์แวร์ การออกแบบระบบเครือข่าย การบริหารจัดการฐานข้อมูล และการสร้างสรรค์นวัตกรรมดิจิทัลเพื่อตอบโจทย์ยุคทันสมัย
+            <p class="quote-text" data-i18n="hero.quote_text">
+              มุ่งเน้นการพัฒนาซอฟต์แวร์ การออกแบบระบบเครือข่าย การบริหารจัดการฐานข้อมูล
+              และการสร้างสรรค์นวัตกรรมดิจิทัลเพื่อตอบโจทย์ยุคทันสมัย
             </p>
             <div class="quote-tags">
               <span class="q-tag">#SoftwareDev</span>
@@ -257,15 +318,17 @@
           <!-- Hero Action Buttons -->
           <div class="hero-actions">
             <button class="btn btn-primary" onclick="window.portfolioApp.goToSlide(1)">
-              <span>สำรวจประวัติการศึกษา</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <span data-i18n="hero.btn_edu">สำรวจประวัติการศึกษา</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </button>
             <button class="btn btn-secondary" onclick="window.portfolioApp.goToSlide(4)">
-              <span>ติดต่อร่วมงาน</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <span data-i18n="hero.btn_contact">ติดต่อร่วมงาน</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
@@ -277,7 +340,7 @@
             <span class="mouse-icon">
               <span class="mouse-wheel"></span>
             </span>
-            <span>เลื่อนลงเพื่อดูเนื้อหาถัดไป</span>
+            <span data-i18n="hero.scroll_hint">เลื่อนลงเพื่อดูเนื้อหาถัดไป</span>
           </div>
 
         </div>
@@ -290,16 +353,16 @@
          ============================================================ -->
     <section class="slide-section" id="slide-2" data-slide-index="1">
       <div class="slide-inner">
-        
+
         <!-- Section Header -->
         <div class="section-header">
           <div class="section-tag-pill">
-            <span>🎓 MILESTONES & LEARNING JOURNEY</span>
+            <span data-i18n="edu.tag">🎓 MILESTONES & LEARNING JOURNEY</span>
           </div>
           <h2 class="section-title">
-            ประวัติการศึกษา <span class="gradient-text">Education Timeline</span>
+            <span data-i18n="edu.title">ประวัติการศึกษา</span> <span class="gradient-text">Education Timeline</span>
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n="edu.subtitle">
             เส้นทางการศึกษาที่บ่มเพาะความรู้ ทักษะทางเทคนิค และความพร้อมสู่การทำงานด้านไอที
           </p>
         </div>
@@ -318,17 +381,19 @@
             <div class="timeline-card glass-card hover-glow">
               <div class="timeline-card-header">
                 <div class="tier-badge current">
-                  <span class="pulse-circle"></span> กำลังศึกษาอยู่
+                  <span class="pulse-circle"></span> <span data-i18n="edu.bachelor.status">กำลังศึกษาอยู่</span>
                 </div>
-                <div class="timeline-level">ระดับปริญญาตรี (Bachelor's Degree)</div>
+                <div class="timeline-level" data-i18n="edu.bachelor.level">ระดับปริญญาตรี (Bachelor's Degree)</div>
               </div>
-              <h3 class="timeline-major">สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT)</h3>
+              <h3 class="timeline-major" data-i18n="edu.bachelor.major">สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT)</h3>
               <div class="timeline-institute">
                 <span class="inst-icon">🏛️</span>
-                <span class="inst-name">มหาวิทยาลัยศรีปทุม (Sripatum University - SPU)</span>
+                <span class="inst-name" data-i18n="edu.bachelor.inst">มหาวิทยาลัยศรีปทุม (Sripatum University -
+                  SPU)</span>
               </div>
-              <p class="timeline-desc">
-                ศึกษาเจาะลึกนวัตกรรมเทคโนโลยีสารสนเทศ การพัฒนาซอฟต์แวร์ระดับองค์กร การออกแบบระบบเครือข่ายและคลาวด์ พร้อมต่อยอดทักษะการแก้ปัญหาเพื่อรองรับโลกดิจิทัลยุคใหม่
+              <p class="timeline-desc" data-i18n="edu.bachelor.desc">
+                ศึกษาเจาะลึกนวัตกรรมเทคโนโลยีสารสนเทศ การพัฒนาซอฟต์แวร์ระดับองค์กร การออกแบบระบบเครือข่ายและคลาวด์
+                พร้อมต่อยอดทักษะการแก้ปัญหาเพื่อรองรับโลกดิจิทัลยุคใหม่
               </p>
               <div class="card-skills-row">
                 <span class="skill-pill">Software Engineering</span>
@@ -349,17 +414,26 @@
             <div class="timeline-card glass-card hover-glow">
               <div class="timeline-card-header">
                 <div class="tier-badge success">
-                  <span>🎓 สำเร็จการศึกษา</span>
+                  <span data-i18n="edu.diploma.status">🎓 สำเร็จการศึกษา</span>
                 </div>
-                <div class="timeline-level">ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</div>
+                <div class="timeline-level" data-i18n="edu.diploma.level">ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</div>
               </div>
-              <h3 class="timeline-major">สาขาเทคโนโลยีสารสนเทศ (Information Technology)</h3>
+              <h3 class="timeline-major" data-i18n="edu.diploma.major">สาขาเทคโนโลยีสารสนเทศ (Information Technology)
+              </h3>
               <div class="timeline-institute">
                 <span class="inst-icon">🏫</span>
-                <span class="inst-name">วิทยาลัยเทคนิคเลย (Loei Technical College)</span>
+                <span class="inst-name" data-i18n="edu.diploma.inst">วิทยาลัยเทคนิคเลย (Loei Technical College)</span>
               </div>
-              <p class="timeline-desc">
-                ยกระดับทักษะการเขียนโปรแกรมเชิงลึก ฐานข้อมูล การดูแลระบบเครือข่าย และได้มีโอกาสฝึกปฏิบัติงานจริงในตำแหน่ง Developer ณ บริษัท ฟินซอฟต์ 2023 จำกัด
+              <div class="timeline-gpax-row">
+                <div class="gpax-badge">
+                  <span class="gpax-icon">⭐</span>
+                  <span class="gpax-label" data-i18n="edu.diploma.gpax_label">เกรดเฉลี่ยสะสม (GPAX):</span>
+                  <span class="gpax-score highlight-gold">3.03</span>
+                </div>
+              </div>
+              <p class="timeline-desc" data-i18n="edu.diploma.desc">
+                ยกระดับทักษะการเขียนโปรแกรมเชิงลึก ฐานข้อมูล การดูแลระบบเครือข่าย
+                และได้มีโอกาสฝึกปฏิบัติงานจริงในตำแหน่ง Developer ณ บริษัท ฟินซอฟต์ 2023 จำกัด
               </p>
               <div class="card-skills-row">
                 <span class="skill-pill">OOP & Data Structures</span>
@@ -380,17 +454,27 @@
             <div class="timeline-card glass-card hover-glow">
               <div class="timeline-card-header">
                 <div class="tier-badge success">
-                  <span>🎓 สำเร็จการศึกษา</span>
+                  <span data-i18n="edu.vocational.status">🎓 สำเร็จการศึกษา</span>
                 </div>
-                <div class="timeline-level">ระดับประกาศนียบัตรวิชาชีพ (ปวช.)</div>
+                <div class="timeline-level" data-i18n="edu.vocational.level">ระดับประกาศนียบัตรวิชาชีพ (ปวช.)</div>
               </div>
-              <h3 class="timeline-major">สาขาเทคโนโลยีสารสนเทศ (Information Technology)</h3>
+              <h3 class="timeline-major" data-i18n="edu.vocational.major">สาขาเทคโนโลยีสารสนเทศ (Information Technology)
+              </h3>
               <div class="timeline-institute">
                 <span class="inst-icon">🏫</span>
-                <span class="inst-name">วิทยาลัยเทคนิคเลย (Loei Technical College)</span>
+                <span class="inst-name" data-i18n="edu.vocational.inst">วิทยาลัยเทคนิคเลย (Loei Technical
+                  College)</span>
               </div>
-              <p class="timeline-desc">
-                จุดเริ่มต้นการเรียนรู้พื้นฐานคอมพิวเตอร์ ระบบปฏิบัติการ สื่อดิจิทัลกราฟิก และได้ฝึกงานด้านสื่อดิจิทัล ณ กรมประชาสัมพันธ์จังหวัดเลย
+              <div class="timeline-gpax-row">
+                <div class="gpax-badge">
+                  <span class="gpax-icon">⭐</span>
+                  <span class="gpax-label" data-i18n="edu.vocational.gpax_label">เกรดเฉลี่ยสะสม (GPAX):</span>
+                  <span class="gpax-score highlight-mint">2.51</span>
+                </div>
+              </div>
+              <p class="timeline-desc" data-i18n="edu.vocational.desc">
+                จุดเริ่มต้นการเรียนรู้พื้นฐานคอมพิวเตอร์ ระบบปฏิบัติการ สื่อดิจิทัลกราฟิก และได้ฝึกงานด้านสื่อดิจิทัล ณ
+                กรมประชาสัมพันธ์จังหวัดเลย
               </p>
               <div class="card-skills-row">
                 <span class="skill-pill">Computer Basics</span>
@@ -411,28 +495,30 @@
          ============================================================ -->
     <section class="slide-section" id="slide-3" data-slide-index="2">
       <div class="slide-inner">
-        
+
         <!-- Section Header -->
         <div class="section-header">
           <div class="section-tag-pill">
-            <span>💻 ACADEMIC EXCELLENCE & SKILLS</span>
+            <span data-i18n="course.tag">💻 ACADEMIC EXCELLENCE & SKILLS</span>
           </div>
           <h2 class="section-title">
-            วิชาเรียนสำคัญ & ทักษะการศึกษา <span class="gradient-text">Key Courses</span>
+            <span data-i18n="course.title">วิชาเรียนสำคัญ & ทักษะการศึกษา</span> <span class="gradient-text">Key
+              Courses</span>
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n="course.subtitle">
             ความเชี่ยวชาญ 4 ด้านหลักที่ครอบคลุมการพัฒนาซอฟต์แวร์ ฐานข้อมูล และระบบโครงสร้างพื้นฐาน
           </p>
         </div>
 
         <!-- 4-Box Grid Layout -->
         <div class="courses-grid">
-          
+
           <!-- Course Card 1: OOP & Data Structures -->
           <div class="course-card glass-card color-lavender hover-elevate">
             <div class="course-card-top">
               <div class="course-icon-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <polyline points="16 18 22 12 16 6"></polyline>
                   <polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
@@ -440,9 +526,10 @@
               <span class="course-index">COURSE 01</span>
             </div>
             <h3 class="course-name">OOP & Data Structures</h3>
-            <h4 class="course-th-name">การเขียนโปรแกรมเชิงวัตถุและโครงสร้างข้อมูล</h4>
-            <p class="course-desc">
-              เข้าใจหลักการ Encapsulation, Inheritance, Polymorphism และการจัดการหน่วยความจำอย่างมีประสิทธิภาพผ่าน Stack, Queue, Linked List และ Tree Algorithms
+            <h4 class="course-th-name" data-i18n="course.c1.th">การเขียนโปรแกรมเชิงวัตถุและโครงสร้างข้อมูล</h4>
+            <p class="course-desc" data-i18n="course.c1.desc">
+              เข้าใจหลักการ Encapsulation, Inheritance, Polymorphism และการจัดการหน่วยความจำอย่างมีประสิทธิภาพผ่าน
+              Stack, Queue, Linked List และ Tree Algorithms
             </p>
             <div class="course-topics">
               <span class="topic-tag">Classes & Objects</span>
@@ -460,7 +547,8 @@
           <div class="course-card glass-card color-pink hover-elevate">
             <div class="course-card-top">
               <div class="course-icon-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                   <line x1="8" y1="21" x2="16" y2="21"></line>
                   <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -469,9 +557,10 @@
               <span class="course-index">COURSE 02</span>
             </div>
             <h3 class="course-name">Modern Web App Development</h3>
-            <h4 class="course-th-name">การพัฒนาเว็บแอปพลิเคชันสมัยใหม่</h4>
-            <p class="course-desc">
-              การสร้างเว็บแอปพลิเคชันที่มีการออกแบบ Responsive Design รองรับทุกหน้าจอ เชื่อมต่อ REST API และให้ความสำคัญกับ UI/UX ที่สวยงามใช้งานง่าย
+            <h4 class="course-th-name" data-i18n="course.c2.th">การพัฒนาเว็บแอปพลิเคชันสมัยใหม่</h4>
+            <p class="course-desc" data-i18n="course.c2.desc">
+              การสร้างเว็บแอปพลิเคชันที่มีการออกแบบ Responsive Design รองรับทุกหน้าจอ เชื่อมต่อ REST API
+              และให้ความสำคัญกับ UI/UX ที่สวยงามใช้งานง่าย
             </p>
             <div class="course-topics">
               <span class="topic-tag">HTML5 & CSS3</span>
@@ -489,7 +578,8 @@
           <div class="course-card glass-card color-mint hover-elevate">
             <div class="course-card-top">
               <div class="course-icon-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                   <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
                   <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
@@ -498,9 +588,10 @@
               <span class="course-index">COURSE 03</span>
             </div>
             <h3 class="course-name">Database Systems & DB/SQL</h3>
-            <h4 class="course-th-name">ระบบจัดการฐานข้อมูลและการออกแบบ SQL</h4>
-            <p class="course-desc">
-              การวิเคราะห์และออกแบบฐานข้อมูลเชิงสัมพันธ์ (Relational Database) การทำ Normalization, ER-Diagram และการเขียนคำสั่ง SQL เพื่อจัดการข้อมูลอย่างถูกต้องและปลอดภัย
+            <h4 class="course-th-name" data-i18n="course.c3.th">ระบบจัดการฐานข้อมูลและการออกแบบ SQL</h4>
+            <p class="course-desc" data-i18n="course.c3.desc">
+              การวิเคราะห์และออกแบบฐานข้อมูลเชิงสัมพันธ์ (Relational Database) การทำ Normalization, ER-Diagram
+              และการเขียนคำสั่ง SQL เพื่อจัดการข้อมูลอย่างถูกต้องและปลอดภัย
             </p>
             <div class="course-topics">
               <span class="topic-tag">Relational DB</span>
@@ -518,7 +609,8 @@
           <div class="course-card glass-card color-sky hover-elevate">
             <div class="course-card-top">
               <div class="course-icon-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
                   <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
                   <line x1="6" y1="6" x2="6.01" y2="6"></line>
@@ -528,9 +620,10 @@
               <span class="course-index">COURSE 04</span>
             </div>
             <h3 class="course-name">Computer Networks & Security</h3>
-            <h4 class="course-th-name">เครือข่ายคอมพิวเตอร์และความมั่นคงสารสนเทศ</h4>
-            <p class="course-desc">
-              สถาปัตยกรรมเครือข่าย TCP/IP, OSI Model, Subnetting, Routing & Switching และการรักษาความปลอดภัยของข้อมูลดิจิทัลเพื่อป้องกันภัยคุกคามทางไซเบอร์
+            <h4 class="course-th-name" data-i18n="course.c4.th">เครือข่ายคอมพิวเตอร์และความมั่นคงสารสนเทศ</h4>
+            <p class="course-desc" data-i18n="course.c4.desc">
+              สถาปัตยกรรมเครือข่าย TCP/IP, OSI Model, Subnetting, Routing & Switching
+              และการรักษาความปลอดภัยของข้อมูลดิจิทัลเพื่อป้องกันภัยคุกคามทางไซเบอร์
             </p>
             <div class="course-topics">
               <span class="topic-tag">TCP/IP & OSI</span>
@@ -546,6 +639,128 @@
 
         </div>
 
+        <!-- Academic & Technical Skill Bars (แถบความเชี่ยวชาญการเรียนสายไอที) -->
+        <div class="skills-expertise-container glass-card hover-glow">
+          <div class="expertise-header">
+            <div class="expertise-header-left">
+              <span class="expertise-icon-sparkle">📊</span>
+              <div>
+                <h3 class="expertise-title" data-i18n="expbar.title">แถบความเชี่ยวชาญเฉพาะทางสายไอที (ICT & Academic
+                  Expertise)</h3>
+                <p class="expertise-subtitle" data-i18n="expbar.subtitle">ระดับความชำนาญที่สั่งสมจากการเรียนรู้
+                  การฝึกปฏิบัติงาน และการทำโปรเจกต์จริง</p>
+              </div>
+            </div>
+            <div class="expertise-badge-tag" data-i18n="expbar.badge">Academic Proficiency</div>
+          </div>
+
+          <div class="skills-bars-grid">
+
+            <!-- Skill 1: Web App -->
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <div class="skill-title-wrap">
+                  <span class="skill-dot dot-lavender"></span>
+                  <span class="skill-name">Modern Web App Development</span>
+                  <span class="skill-subtag" data-i18n="expbar.s1_sub">(HTML5, CSS3, JavaScript, UI/UX)</span>
+                </div>
+                <span class="skill-percent">92%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill fill-lavender" style="width: 92%;">
+                  <span class="fill-sheen"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill 2: OOP & Programming -->
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <div class="skill-title-wrap">
+                  <span class="skill-dot dot-pink"></span>
+                  <span class="skill-name">OOP & Software Programming</span>
+                  <span class="skill-subtag" data-i18n="expbar.s2_sub">(Java, OOP Concepts, Data Structures)</span>
+                </div>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill fill-pink" style="width: 88%;">
+                  <span class="fill-sheen"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill 3: Database & SQL -->
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <div class="skill-title-wrap">
+                  <span class="skill-dot dot-mint"></span>
+                  <span class="skill-name">Database Systems & SQL Design</span>
+                  <span class="skill-subtag" data-i18n="expbar.s3_sub">(ER-Model, Normalization, Queries)</span>
+                </div>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill fill-mint" style="width: 85%;">
+                  <span class="fill-sheen"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill 4: Digital Media -->
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <div class="skill-title-wrap">
+                  <span class="skill-dot dot-sky"></span>
+                  <span class="skill-name">Digital Media & Graphic Editing</span>
+                  <span class="skill-subtag" data-i18n="expbar.s4_sub">(Video Production, PR Graphics)</span>
+                </div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill fill-sky" style="width: 90%;">
+                  <span class="fill-sheen"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill 5: Networks -->
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <div class="skill-title-wrap">
+                  <span class="skill-dot dot-butter"></span>
+                  <span class="skill-name">Computer Networks & Infrastructure</span>
+                  <span class="skill-subtag" data-i18n="expbar.s5_sub">(TCP/IP, Routing, Security Basics)</span>
+                </div>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill fill-butter" style="width: 80%;">
+                  <span class="fill-sheen"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill 6: Problem Solving & Collaboration -->
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <div class="skill-title-wrap">
+                  <span class="skill-dot dot-purple"></span>
+                  <span class="skill-name">Problem Solving & Team Collaboration</span>
+                  <span class="skill-subtag" data-i18n="expbar.s6_sub">(การแก้ปัญหาโค้ด, Agile/Dev Team)</span>
+                </div>
+                <span class="skill-percent">87%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill fill-purple" style="width: 87%;">
+                  <span class="fill-sheen"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -554,16 +769,17 @@
          ============================================================ -->
     <section class="slide-section" id="slide-4" data-slide-index="3">
       <div class="slide-inner">
-        
+
         <!-- Section Header -->
         <div class="section-header">
           <div class="section-tag-pill">
-            <span>💼 HANDS-ON WORK EXPERIENCE</span>
+            <span data-i18n="work.tag">💼 HANDS-ON WORK EXPERIENCE</span>
           </div>
           <h2 class="section-title">
-            ประสบการณ์การทำงาน & ฝึกงาน <span class="gradient-text">Work Experience</span>
+            <span data-i18n="work.title">ประสบการณ์การทำงาน & ฝึกงาน</span> <span class="gradient-text">Work
+              Experience</span>
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n="work.subtitle">
             การนำความรู้ทฤษฎีมาประยุกต์ใช้ในการทำงานจริง ทั้งการเขียนโปรแกรมและการสื่อสารดิจิทัล
           </p>
         </div>
@@ -579,12 +795,12 @@
                   <span>💻</span>
                 </div>
                 <div class="brand-info">
-                  <h3 class="company-name">บริษัท ฟินซอฟต์ 2023 จำกัด</h3>
+                  <h3 class="company-name" data-i18n="work.c1.name">บริษัท ฟินซอฟต์ 2023 จำกัด</h3>
                   <span class="company-en">Finsoft 2023 Co., Ltd.</span>
                 </div>
               </div>
               <div class="exp-meta-badge">
-                <span class="badge-period">ช่วงเวลา: ระดับ ปวส.</span>
+                <span class="badge-period" data-i18n="work.c1.period">ช่วงเวลา: ระดับ ปวส.</span>
                 <span class="badge-role">Developer (Dev)</span>
               </div>
             </div>
@@ -592,25 +808,29 @@
             <div class="exp-role-title-wrap">
               <div class="role-icon">⚡</div>
               <div>
-                <h4 class="role-title">นักพัฒนาซอฟต์แวร์ / Developer</h4>
-                <p class="role-summary">พัฒนาและเขียนโปรแกรม ร่วมสร้างสรรค์โซลูชันด้านซอฟต์แวร์</p>
+                <h4 class="role-title" data-i18n="work.c1.role">นักพัฒนาซอฟต์แวร์ / Developer</h4>
+                <p class="role-summary" data-i18n="work.c1.summary">พัฒนาและเขียนโปรแกรม
+                  ร่วมสร้างสรรค์โซลูชันด้านซอฟต์แวร์</p>
               </div>
             </div>
 
             <div class="exp-responsibilities">
-              <h5 class="resp-title">หน้าที่ความรับผิดชอบหลัก:</h5>
+              <h5 class="resp-title" data-i18n="work.resp_title">หน้าที่ความรับผิดชอบหลัก:</h5>
               <ul class="resp-list">
                 <li>
                   <span class="bullet-star">✦</span>
-                  <span><strong>พัฒนาและเขียนโปรแกรม:</strong> ร่วมเขียนโค้ดและพัฒนาฟีเจอร์สำหรับระบบงานซอฟต์แวร์ของบริษัท</span>
+                  <span data-i18n-html="work.c1.r1"><strong>พัฒนาและเขียนโปรแกรม:</strong>
+                    ร่วมเขียนโค้ดและพัฒนาฟีเจอร์สำหรับระบบงานซอฟต์แวร์ของบริษัท</span>
                 </li>
                 <li>
                   <span class="bullet-star">✦</span>
-                  <span><strong>ร่วมสร้างสรรค์โซลูชัน:</strong> วิเคราะห์ปัญหาและออกแบบแนวทางแก้ไขปัญหาด้านซอฟต์แวร์ให้ตอบโจทย์ผู้ใช้</span>
+                  <span data-i18n-html="work.c1.r2"><strong>ร่วมสร้างสรรค์โซลูชัน:</strong>
+                    วิเคราะห์ปัญหาและออกแบบแนวทางแก้ไขปัญหาด้านซอฟต์แวร์ให้ตอบโจทย์ผู้ใช้</span>
                 </li>
                 <li>
                   <span class="bullet-star">✦</span>
-                  <span><strong>การทำงานร่วมกับทีม:</strong> ทดสอบความถูกต้องของโปรแกรม แก้ไขบัก และเรียนรู้กระบวนการพัฒนาซอฟต์แวร์แบบมืออาชีพ</span>
+                  <span data-i18n-html="work.c1.r3"><strong>การทำงานร่วมกับทีม:</strong> ทดสอบความถูกต้องของโปรแกรม
+                    แก้ไขบัก และเรียนรู้กระบวนการพัฒนาซอฟต์แวร์แบบมืออาชีพ</span>
                 </li>
               </ul>
             </div>
@@ -631,12 +851,12 @@
                   <span>🎬</span>
                 </div>
                 <div class="brand-info">
-                  <h3 class="company-name">กรมประชาสัมพันธ์จังหวัดเลย</h3>
+                  <h3 class="company-name" data-i18n="work.c2.name">กรมประชาสัมพันธ์จังหวัดเลย</h3>
                   <span class="company-en">Loei Public Relations Department</span>
                 </div>
               </div>
               <div class="exp-meta-badge">
-                <span class="badge-period">ช่วงเวลา: ระดับ ปวช.</span>
+                <span class="badge-period" data-i18n="work.c2.period">ช่วงเวลา: ระดับ ปวช.</span>
                 <span class="badge-role">Digital Media & Graphic Intern</span>
               </div>
             </div>
@@ -644,25 +864,29 @@
             <div class="exp-role-title-wrap">
               <div class="role-icon">🎨</div>
               <div>
-                <h4 class="role-title">ฝึกงานสื่อดิจิทัลและกราฟิก</h4>
-                <p class="role-summary">ตัดต่อวิดีโอ ออกแบบสื่อประชาสัมพันธ์ และโปรโมทกิจกรรมของจังหวัดเลย</p>
+                <h4 class="role-title" data-i18n="work.c2.role">ฝึกงานสื่อดิจิทัลและกราฟิก</h4>
+                <p class="role-summary" data-i18n="work.c2.summary">ตัดต่อวิดีโอ ออกแบบสื่อประชาสัมพันธ์
+                  และโปรโมทกิจกรรมของจังหวัดเลย</p>
               </div>
             </div>
 
             <div class="exp-responsibilities">
-              <h5 class="resp-title">หน้าที่ความรับผิดชอบหลัก:</h5>
+              <h5 class="resp-title" data-i18n="work.resp_title">หน้าที่ความรับผิดชอบหลัก:</h5>
               <ul class="resp-list">
                 <li>
                   <span class="bullet-star">✦</span>
-                  <span><strong>ตัดต่อวิดีโอ & มัลติมีเดีย:</strong> ผลิตและตัดต่อคลิปวิดีโอสรุปข่าว งานกิจกรรม และสารคดีสั้นเพื่อเผยแพร่ผ่านช่องทางออนไลน์</span>
+                  <span data-i18n-html="work.c2.r1"><strong>ตัดต่อวิดีโอ & มัลติมีเดีย:</strong>
+                    ผลิตและตัดต่อคลิปวิดีโอสรุปข่าว งานกิจกรรม และสารคดีสั้นเพื่อเผยแพร่ผ่านช่องทางออนไลน์</span>
                 </li>
                 <li>
                   <span class="bullet-star">✦</span>
-                  <span><strong>ออกแบบสื่อประชาสัมพันธ์:</strong> ออกแบบภาพกราฟิก โปสเตอร์ และแบนเนอร์ประชาสัมพันธ์โครงการต่างๆ</span>
+                  <span data-i18n-html="work.c2.r2"><strong>ออกแบบสื่อประชาสัมพันธ์:</strong> ออกแบบภาพกราฟิก โปสเตอร์
+                    และแบนเนอร์ประชาสัมพันธ์โครงการต่างๆ</span>
                 </li>
                 <li>
                   <span class="bullet-star">✦</span>
-                  <span><strong>โปรโมทกิจกรรมจังหวัดเลย:</strong> ช่วยดูแลการสื่อสารและการเผยแพร่ข้อมูลข่าวสารผ่านช่องทางโซเชียลมีเดียของหน่วยงาน</span>
+                  <span data-i18n-html="work.c2.r3"><strong>โปรโมทกิจกรรมจังหวัดเลย:</strong>
+                    ช่วยดูแลการสื่อสารและการเผยแพร่ข้อมูลข่าวสารผ่านช่องทางโซเชียลมีเดียของหน่วยงาน</span>
                 </li>
               </ul>
             </div>
@@ -685,27 +909,29 @@
          ============================================================ -->
     <section class="slide-section" id="slide-5" data-slide-index="4">
       <div class="slide-inner contact-layout">
-        
+
         <!-- Section Header -->
         <div class="section-header">
           <div class="section-tag-pill">
-            <span>💌 LET'S CONNECT & COLLABORATE</span>
+            <span data-i18n="contact.tag">💌 LET'S CONNECT & COLLABORATE</span>
           </div>
           <h2 class="section-title">
-            ช่องทางการติดต่อ <span class="gradient-text">Contact Information</span>
+            <span data-i18n="contact.title">ช่องทางการติดต่อ</span> <span class="gradient-text">Contact
+              Information</span>
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n="contact.subtitle">
             ยินดีพูดคุยแลกเปลี่ยน พร้อมเปิดรับโอกาสในการฝึกงาน ร่วมงาน และสร้างสรรค์โปรเจกต์ใหม่ๆ ค่ะ
           </p>
         </div>
 
         <!-- Contact Cards Container -->
         <div class="contact-cards-container">
-          
+
           <!-- Card 1: Email -->
           <div class="contact-card glass-card hover-elevate">
             <div class="contact-icon-bubble color-lavender">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
@@ -713,18 +939,20 @@
             <div class="contact-details">
               <span class="contact-type">EMAIL ADDRESS</span>
               <a href="mailto:khaw272004@gmail.com" class="contact-value" id="emailValue">khaw272004@gmail.com</a>
-              <p class="contact-hint">ส่งอีเมลติดต่อสอบถามหรือส่งรายละเอียดงานได้ทันที</p>
+              <p class="contact-hint" data-i18n="contact.email_hint">ส่งอีเมลติดต่อสอบถามหรือส่งรายละเอียดงานได้ทันที
+              </p>
             </div>
             <div class="contact-actions">
               <button class="btn btn-action-primary" id="copyEmailBtn" aria-label="คัดลอกอีเมล">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                <span>คัดลอกอีเมล</span>
+                <span data-i18n="contact.btn_copy_email">คัดลอกอีเมล</span>
               </button>
               <a href="mailto:khaw272004@gmail.com" class="btn btn-action-secondary">
-                <span>เปิดอีเมล</span>
+                <span data-i18n="contact.btn_open_email">เปิดอีเมล</span>
               </a>
             </div>
           </div>
@@ -732,24 +960,30 @@
           <!-- Card 2: Phone -->
           <div class="contact-card glass-card hover-elevate">
             <div class="contact-icon-bubble color-mint">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
               </svg>
             </div>
             <div class="contact-details">
               <span class="contact-type">PHONE NUMBER</span>
               <a href="tel:0615597669" class="contact-value" id="phoneValue">061-559-7669</a>
-              <p class="contact-hint">โทรศัพท์ติดต่อพูดคุยในเวลาทำการ</p>
+              <p class="contact-hint" data-i18n="contact.phone_hint">โทรศัพท์ติดต่อพูดคุยในเวลาทำการ</p>
             </div>
             <div class="contact-actions">
               <a href="tel:0615597669" class="btn btn-action-primary" id="callPhoneBtn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
                 </svg>
-                <span>โทรออก</span>
+                <span data-i18n="contact.btn_call">โทรออก</span>
               </a>
               <button class="btn btn-action-secondary" id="copyPhoneBtn" aria-label="คัดลอกเบอร์โทร">
-                <span>คัดลอกเบอร์</span>
+                <span data-i18n="contact.btn_copy_phone">คัดลอกเบอร์</span>
               </button>
             </div>
           </div>
@@ -757,7 +991,8 @@
           <!-- Card 3: Location & Status -->
           <div class="contact-card glass-card hover-elevate">
             <div class="contact-icon-bubble color-pink">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
@@ -765,11 +1000,12 @@
             <div class="contact-details">
               <span class="contact-type">LOCATION & STATUS</span>
               <span class="contact-value highlight-status">Bangkok & Loei, Thailand</span>
-              <p class="contact-hint">มหาวิทยาลัยศรีปทุม (SPU) • พร้อมรับข้อเสนอและโอกาสใหม่ๆ</p>
+              <p class="contact-hint" data-i18n="contact.location_hint">มหาวิทยาลัยศรีปทุม (SPU) •
+                พร้อมรับข้อเสนอและโอกาสใหม่ๆ</p>
             </div>
             <div class="contact-actions">
               <button class="btn btn-action-tertiary" onclick="window.portfolioApp.goToSlide(0)">
-                <span>กลับสู่หน้าแรก ✨</span>
+                <span data-i18n="contact.btn_back_top">กลับสู่หน้าแรก ✨</span>
               </button>
             </div>
           </div>
@@ -780,11 +1016,11 @@
         <footer class="portfolio-footer">
           <div class="footer-divider"></div>
           <div class="footer-content">
-            <p class="footer-copyright">
-              Copyright © 2026 Ruangkhaw Boonyalekha - Portfolio. All rights reserved.
+            <p class="footer-copyright" data-i18n="footer.copyright">
+              Copyright © 2026 Ruangkhaw Bunyalekha - Portfolio. All rights reserved.
             </p>
-            <p class="footer-tagline">
-              ออกแบบและพัฒนาด้วยความใส่ใจ สไตล์พาสเทลละมุน เพื่อนำเสนอตัวตนของ มีญ่า (รวงข้าว บุญยเลขา) 🌸
+            <p class="footer-tagline" data-i18n="footer.tagline">
+              ออกแบบและพัฒนาด้วยความใส่ใจ 🌸
             </p>
           </div>
         </footer>
@@ -802,7 +1038,9 @@
     </div>
   </div>
 
-  <!-- JavaScript Application File -->
+  <!-- Internationalization (i18n) & Application Scripts -->
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
