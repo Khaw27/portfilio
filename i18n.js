@@ -31,7 +31,7 @@ window.portfolioTranslations = {
     "hero.portfolio_title": "Personal Portfolio ✨",
     "hero.name_prefix": "นางสาว",
     "hero.name_main": "รวงข้าว บุญยเลขา",
-    "hero.nickname": "(ชื่อเล่น: มีญ่า)",
+    "hero.nickname": "(มีญ่า)",
     "hero.major": "สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT)",
     "hero.university": "มหาวิทยาลัยศรีปทุม (SPU)",
     "hero.quote_tag": "คำนิยาม & ปรัชญาสาขา ICT",
@@ -120,8 +120,8 @@ window.portfolioTranslations = {
     "contact.btn_copy_phone": "คัดลอกเบอร์",
     "contact.location_hint": "มหาวิทยาลัยศรีปทุม (SPU) • พร้อมรับข้อเสนอและโอกาสใหม่ๆ",
     "contact.btn_back_top": "กลับสู่หน้าแรก ✨",
-    "footer.copyright": "Copyright © 2026 Ruangkhaw Boonyalekha - Portfolio. All rights reserved.",
-    "footer.tagline": "ออกแบบและพัฒนาด้วยความใส่ใจ สไตล์พาสเทลละมุน เพื่อนำเสนอตัวตนของ มีญ่า (รวงข้าว บุญยเลขา) 🌸",
+    "footer.copyright": "Copyright © 2026 Ruangkhaw Bunyalekha - Portfolio. All rights reserved.",
+    "footer.tagline": "สาขาเทคโนโลยีสารสนเทศและการสื่อสาร (ICT) มหาวิทยาลัยศรีปทุม (SPU) • นางสาว รวงข้าว บุญยเลขา 🌸",
 
     // Controls & Hints
     "ctrl.keyboard_hint": "💡 ใช้ปุ่ม <kbd>↑</kbd> <kbd>↓</kbd> หรือ <kbd>Space</kbd> เพื่อเปลี่ยนสไลด์",
@@ -157,8 +157,8 @@ window.portfolioTranslations = {
     "hero.greeting": "👋 Hello! Welcome to",
     "hero.portfolio_title": "Personal Portfolio ✨",
     "hero.name_prefix": "Ms.",
-    "hero.name_main": "Ruangkhaw Boonyalekha",
-    "hero.nickname": "(Nickname: Miya)",
+    "hero.name_main": "Ruangkhaw Bunyalekha",
+    "hero.nickname": "(Miya)",
     "hero.major": "Information & Communication Technology (ICT)",
     "hero.university": "Sripatum University (SPU)",
     "hero.quote_tag": "ICT Philosophy & Core Focus",
@@ -247,8 +247,8 @@ window.portfolioTranslations = {
     "contact.btn_copy_phone": "Copy Phone",
     "contact.location_hint": "Sripatum University (SPU) • Open for exciting opportunities",
     "contact.btn_back_top": "Back to Top ✨",
-    "footer.copyright": "Copyright © 2026 Ruangkhaw Boonyalekha - Portfolio. All rights reserved.",
-    "footer.tagline": "Crafted with care and pastel aesthetics to showcase Miya's (Ruangkhaw Boonyalekha) tech journey 🌸",
+    "footer.copyright": "Copyright © 2026 Ruangkhaw Bunyalekha - Portfolio. All rights reserved.",
+    "footer.tagline": "Information & Communication Technology (ICT), Sripatum University (SPU) • Ms. Ruangkhaw Bunyalekha 🌸",
 
     // Controls & Hints
     "ctrl.keyboard_hint": "💡 Use <kbd>↑</kbd> <kbd>↓</kbd> or <kbd>Space</kbd> keys to navigate slides",

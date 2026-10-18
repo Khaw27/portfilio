@@ -1,6 +1,6 @@
 /**
  * Miya.Portfolio - Interactive Application Logic
- * Personal Portfolio for Ruangkhaw Boonyalekha (ICT, SPU)
+ * Personal Portfolio for Ruangkhaw Bunyalekha (ICT, SPU)
  */
 
 (function () {
